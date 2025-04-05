@@ -1,31 +1,89 @@
-# Stock Price Prediction📈
-This repository contains a Jupyter Notebook focused on predicting stock prices using various data processing and machine learning techniques.
+# 📈 Stock Price Prediction with Flask Web App
 
-## Project Overview📊
-This notebook explores the following steps to predict stock prices:
+This repository provides a full solution for predicting stock prices using an LSTM model. It includes a Jupyter Notebook for training and a **Flask Web App** for real-time predictions and visualization.  
 
-### Importing Libraries and Datasets: Loading necessary libraries and datasets for analysis.
-#### 💫Pivoting the Data: Organizing the data into a suitable format for analysis.
-#### 💫Plotting Dataset Close Values: Visualizing the closing prices of the stocks over time.
-#### 💫Plotting Moving Averages: Calculating and visualizing moving averages for different time windows (100 days and 10 days).
-#### 💫Normalizing Dataset: Using MinMax Scaler to normalize the dataset for better performance during model training.
-## Requirements🔨
-To run this notebook, ensure you have the following Python libraries installed:
+---
 
-#### numpy
-#### pandas
-#### matplotlib
-#### scikit-learn
-#### tensorflow or keras (if you’re using deep learning models)
-## Usage👨‍💻
- ### To use this notebook:
+## 📊 Project Overview
 
-#### Clone this repository.
-#### Install the required libraries.
-#### Run the notebook in a Jupyter environment.
-#### Follow the steps outlined in the notebook to process the data and build the prediction model.
-## Contributing
-Feel free to fork this repository and submit pull requests if you have any improvements or additional features you’d like to add.
+The project follows these main steps:
 
-## License🪪
-This project is open-source and available under the MIT License.
+- 📥 **Importing Libraries and Datasets**: Load essential libraries and stock price data.
+- 🧮 **Pivoting the Data**: Organize the data into a suitable format for analysis.
+- 📈 **Plotting Close Prices**: Visualize the closing stock prices over time.
+- 📉 **Moving Averages**: Compute and plot 10-day and 100-day moving averages.
+- 🔄 **Normalizing Data**: Scale data using MinMaxScaler for better LSTM training.
+- 🧠 **LSTM Model**: Train a Long Short-Term Memory (LSTM) neural network.
+- 💾 **Model Saving**: Save the trained model as `lstm.pkl` using `joblib`.
+- 🌐 **Deployment**: Build a user-friendly Flask web app to display predictions interactively.
+
+---
+
+## 🔧 Requirements
+
+Install the necessary Python libraries with or simply refer requirements.txt:
+
+```bash
+pip install numpy pandas matplotlib scikit-learn tensorflow keras flask joblib
+```
+
+---
+
+## 👨‍💻 How to Use This Project
+
+### ✅ Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/stock-price-predictor.git
+cd stock-price-predictor
+```
+
+---
+
+### ✅ Step 2: Train and Save the Model
+
+1. Open the Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+2. Run the cells to:
+   - Load and process stock data
+   - Train the LSTM model
+   - Save the trained model as `lstm.pkl`
+
+---
+
+### ✅ Step 3: Run the Flask Web App
+
+1. Ensure `lstm.pkl` is present in the same directory as `app.py`.
+2. Run the Flask app:
+
+```bash
+python app.py
+```
+
+3. Open your browser and go to:  
+   👉 `http://localhost:5000`
+
+---
+
+## 🌐 Flask Web App UI
+
+### 🖼️ User Interface Preview of the LSTM Stock Predictor Web App (Last 30-days Close Price)
+
+![image](https://github.com/user-attachments/assets/25e22e92-2412-4d9e-9704-864662056620)
+![image](https://github.com/user-attachments/assets/073df060-288d-47ee-835a-9dc0ddf593ab)
+
+
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repo and submit pull requests for improvements or new features.
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**.
